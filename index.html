@@ -1,63 +1,46 @@
-<!doctype html>
+<!DOCTYPE>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyChat</title>
+    <script>
+        function validarNombreyClave() {
+            clave1 =document.Mychat.clave1.value;
+            clave2 =document.Mychat.clave2.value;
+            cuenta = document.Mychat.cuenta.value;
+            acountV="fabrizio.vasquez@utec.edu.pe";
 
-    <link rel="stylesheet" href="">
-    <script type="text/javascript">
-        function check(elemento) {
-            if(elemento.value=''){
-                elemento.className='error';
+            if(cuenta === acountV && clave1 === "123" && clave2 === clave1){
+                alert("Sus datos son correctos.\n PUEDE PROSEGUIR");
             }
-            else{
-                elemento.className='input';
+            if(cuenta !== acountV){
+                alert("El Nombre de cuenta no coindice");
             }
-        }
-        function checkPassword(elemento) {
-            if(elemento.value !==''){
-                var data =elemento.value;
-                if(isNaN(data)){
-                    elemento.className='error'
-                }
-                else{
-                    elemento.className='input';
-                }
+            if(clave1 !== clave2){
+                alert("Las claves no son las mismas.\nREVISE POR FAVOR");
             }
-        }
-        function validar() {
-            
+
         }
     </script>
 
 </head>
+
 <body>
-    <div id ="almancen-form">
-        <form action="#" method="post" >
-        <p class ="nombre">
-            <h5>Nombre</h5>
 
-            <input type="text" class="input" placeholder="acount" id="nombre" name="Acount" onblur="revisar(this)">
-        </p>
-            <p class="contraseña">
-                <h5>Contraseña</h5>
-                <input type="password" class="input" placeholder="password" id="contraseña" name="Password" onblur="revisar(this)">
-            </p>
+<form action="" name="Mychat" method="post">
+    <label>
+        Cuenta: <input type="text" name="cuenta" size="15">
+        Contraseña: <input type="password" name="clave1" size="20">
+    </label>
+    <label>
+    <br>
+    Repita la contraseña: <input type="password" name="clave2" size="20">
+    <br>
+        <input type="submit" value="Enviar" onclick="validarNombreyClave()">
+    </label>
+</form>
 
-        <div class="enviar">
-            <input type="submit" value="SEND" id="enviar"/>
-            <div class="transicion"></div>
-        </div>
-
-
-
-
-
-        </form>
-
-    </div>
 </body>
 </html>
