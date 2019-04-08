@@ -11,7 +11,6 @@
             clave2 =document.Mychat.clave2.value;
             cuenta = document.Mychat.cuenta.value;
             acountV="fabrizio.vasquez@utec.edu.pe";
-
             if(cuenta === acountV && clave1 === "123" && clave2 === clave1){
                 alert("Sus datos son correctos.\n PUEDE PROSEGUIR");
             }
@@ -21,7 +20,6 @@
             if(clave1 !== clave2){
                 alert("Las claves no son las mismas.\nREVISE POR FAVOR");
             }
-
         }
     </script>
 
@@ -29,15 +27,15 @@
 
 <body>
 
-<form action="" name="Mychat" method="post">
+<form action="https://www.udemy.com/ai-for-business/" name="Mychat" method="post">
     <label>
         Cuenta: <input type="text" name="cuenta" size="15">
         Contraseña: <input type="password" name="clave1" size="20">
     </label>
     <label>
-    <br>
-    Repita la contraseña: <input type="password" name="clave2" size="20">
-    <br>
+        <br>
+        Repita la contraseña: <input type="password" name="clave2" size="20">
+        <br>
         <input type="submit" value="Enviar" onclick="validarNombreyClave()">
     </label>
 </form>
