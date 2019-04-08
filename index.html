@@ -1,12 +1,63 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyChat</title>
+
+    <link rel="stylesheet" href="">
+    <script type="text/javascript">
+        function check(elemento) {
+            if(elemento.value=''){
+                elemento.className='error';
+            }
+            else{
+                elemento.className='input';
+            }
+        }
+        function checkPassword(elemento) {
+            if(elemento.value !==''){
+                var data =elemento.value;
+                if(isNaN(data)){
+                    elemento.className='error'
+                }
+                else{
+                    elemento.className='input';
+                }
+            }
+        }
+        function validar() {
+            
+        }
+    </script>
+
 </head>
-
 <body>
-Content of the document......
-</body>
+    <div id ="almancen-form">
+        <form action="#" method="post" >
+        <p class ="nombre">
+            <h5>Nombre</h5>
 
+            <input type="text" class="input" placeholder="acount" id="nombre" name="Acount" onblur="revisar(this)">
+        </p>
+            <p class="contraseña">
+                <h5>Contraseña</h5>
+                <input type="password" class="input" placeholder="password" id="contraseña" name="Password" onblur="revisar(this)">
+            </p>
+
+        <div class="enviar">
+            <input type="submit" value="SEND" id="enviar"/>
+            <div class="transicion"></div>
+        </div>
+
+
+
+
+
+        </form>
+
+    </div>
+</body>
 </html>
