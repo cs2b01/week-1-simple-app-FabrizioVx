@@ -7,10 +7,10 @@
     <title>MyChat</title>
     <script>
         function validarNombreyClave() {
-            clave1 =document.Mychat.clave1.value;
-            clave2 =document.Mychat.clave2.value;
-            cuenta = document.Mychat.cuenta.value;
-            acountV="fabrizio.vasquez@utec.edu.pe";
+            var clave1 =document.Mychat.clave1.value;
+            var clave2 =document.Mychat.clave2.value;
+            var cuenta = document.Mychat.cuenta.value;
+            var acountV="fabrizio.vasquez@utec.edu.pe";
             if(cuenta === acountV && clave1 === "123" && clave2 === clave1){
                 alert("Sus datos son correctos.\n PUEDE PROSEGUIR");
             }
@@ -27,7 +27,7 @@
 
 <body>
 
-<form action="https://www.udemy.com/ai-for-business/" name="Mychat" method="post">
+<form action="" name="Mychat" method="post">
     <h2>FORMULARIO DE MYCHAT</h2>
     <label>
         Cuenta: <input type="text" name="cuenta" size="15">
@@ -40,6 +40,5 @@
         <input type="submit" value="Enviar" onclick="validarNombreyClave()">
     </label>
 </form>
-
 </body>
 </html>
